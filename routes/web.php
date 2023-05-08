@@ -14,7 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+ $nome = "Rodrigo";
+ $idade= 38;
+
+ $arr = [10,20,30,40,50];
+ $nomes = ["Rodrigo", "Maria", "Fany","Alberto"];
+
+    return view('welcome',
+     ['nome'=>$nome,
+      'idade' =>$idade, 
+      'profissao' => "Programador", 
+      'arr' => $arr,
+      'nomes' =>$nomes,
+    ]);
 });
 
 Route::get('/contato', function () {
@@ -22,5 +34,11 @@ Route::get('/contato', function () {
 });
 
 Route::get('/produtos', function () {
-    return view('products');
+    $busca = request('search');
+
+    return view('products',['busca' => $busca]);
+});
+// criando parametros
+Route::get('/produtos_teste/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
 });
