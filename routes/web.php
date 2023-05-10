@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,31 +13,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ContatosController;
+use App\Http\Controllers\ProdutosController;
 
-Route::get('/', function () {
- $nome = "Rodrigo";
- $idade= 38;
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
 
- $arr = [10,20,30,40,50];
- $nomes = ["Rodrigo", "Maria", "Fany","Alberto"];
+Route::get('/contato', [ContatosController::class, 'contato']);
+Route::get('/produtos', [ProdutosController::class, 'produto']);
 
-    return view('welcome',
-     ['nome'=>$nome,
-      'idade' =>$idade, 
-      'profissao' => "Programador", 
-      'arr' => $arr,
-      'nomes' =>$nomes,
-    ]);
-});
-
-Route::get('/contato', function () {
-    return view('contact');
-});
 
 Route::get('/produtos', function () {
     $busca = request('search');
 
-    return view('products',['busca' => $busca]);
+    return view('products', ['busca' => $busca]);
 });
 // criando parametros
 Route::get('/produtos_teste/{id?}', function ($id = null) {
