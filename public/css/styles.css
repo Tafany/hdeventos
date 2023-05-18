@@ -1,12 +1,177 @@
+/* General */
 * {
-  font-size: 'poppins';
+  font-family: 'poppins' !important;
+
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+
+header {
+  background: #ededf2;
+  border-bottom: 1px solid #ccc;
+}
+
+.masck-header {
+  background: #2a044a;
+  border-radius: 0 0 0 50px;
+  height: 8px;
+  max-width: 1420px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+
+.row {
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.btn-primary {
+  background: #2a044a;
+  border: 2px solid #2a044a;
 
 }
 
-h1 {
-  color: brown;
+.btn-primary:hover {
+  background: #7ab317;
+  border: 2px solid #7ab317;
 }
+
+/* Estilo da Nav */
 
 #navbar img {
   width: 10vh;
+}
+
+#navbar {
+  justify-content: space-between;
+
+}
+
+#navbar a {
+  font-size: 16px;
+  color: #6c788e;
+  font-weight: 700;
+  white-space: 1px;
+
+}
+
+#navbar a:hover {
+  color: #2a044a;
+}
+
+/* seach Container */
+#search-container {
+  background-image: url("../img/plateia.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+}
+
+
+
+#search-container h1 {
+  color: #FFFF;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+  filter: drop-shadow(8px 8px 4px black);
+  font-size: 48px;
+}
+
+
+#search-container form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* lista de eventos */
+
+#events-container {
+  padding: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#events-container h2 {
+  color: #4b4d4e;
+  font-weight: 600;
+  font-size: 42px;
+  text-align: center;
+}
+
+#events-container .subtitle {
+  color: #18191a;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+
+#cards-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#cards-container .card {
+  flex: 1 1 0;
+  max-width: 25%;
+  border-radius: 10px;
+  padding: 0;
+  margin: 5px;
+
+}
+
+#cards-container img {
+  max-height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card .card-date {
+  font-size: 14px;
+  color: #919090;
+
+}
+
+.card .card-title {
+  font-size: 20px;
+  color: #0c0115;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+.card .card-participants {
+  font-size: 16px;
+  color: #757575;
+
+}
+
+
+
+
+
+/* responsive default screens 1201 x 1500 */
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  .masck-header {
+    max-width: 1220px;
+
+  }
 }

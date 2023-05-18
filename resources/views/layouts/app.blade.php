@@ -22,6 +22,7 @@
 
 <body>
     <header>
+        <div class="masck-header"></div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id='navbar'>
                 <a href="/" class="navbar-brand">
