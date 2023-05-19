@@ -15,19 +15,28 @@ body {
 
 
 header {
-  background: #ededf2;
-  border-bottom: 1px solid #ccc;
+
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1004;
+
 }
 
+
 .masck-header {
-  background: #2a044a;
-  border-radius: 0 0 0 50px;
-  height: 8px;
+  /* background: #2a044a; */
+  background: rgb(33, 36, 72);
+  background: linear-gradient(184deg, rgb(43, 47, 83) 45%, rgba(1, 1, 1, 1) 100%);
+  border-radius: 0 0 0 134px;
+  height: 74px;
   max-width: 1420px;
   position: absolute;
   right: 0;
   width: 100%;
   z-index: 3;
+  box-shadow: -2px 2px 20px #4a4747;
 }
 
 
@@ -57,8 +66,9 @@ header {
 }
 
 #navbar {
-  justify-content: space-between;
-
+  justify-content: flex-end;
+  margin: 0 70px;
+  z-index: 10;
 }
 
 #navbar a {
@@ -70,17 +80,17 @@ header {
 }
 
 #navbar a:hover {
-  color: #2a044a;
+  color: #ffffff;
 }
 
 /* seach Container */
 #search-container {
-  background-image: url("../img/plateia.png");
+  background-image: url("../img/canetapapel.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
   width: 100%;
-  padding: 50px;
+  padding: 112px 0 50px;
   text-align: center;
 }
 
@@ -165,8 +175,19 @@ header {
 }
 
 
+footer {
+  text-align: center;
+  background: #2a044a;
+  color: #FFFF;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 0;
+}
 
-
+footer p {
+  margin-bottom: 0;
+}
 
 /* responsive default screens 1201 x 1500 */
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
