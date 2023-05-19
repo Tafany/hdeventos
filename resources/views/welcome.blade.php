@@ -1,21 +1,31 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('title', 'HD Eventos')
 
-    <title>Laravel</title>
+@section('content')
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <div id="search-container" class="col-md-12">
+        <h1>Busque o evento</h1>
+        <form action="">
+            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
+        </form>
+    </div>
 
-
-</head>
-
-<body>
-    <h1></h1>
-</body>
-
-</html>
+    <div id="events-container" class="col-md-12">
+        <h2>Próximos Eventos</h2>
+        <p class="subtitle">Veja os eventos dos próximos dias</p>
+        <div id="cards-container" class="row">
+            @foreach ($events as $event)
+                <div class="card col-md-3">
+                    <img src="img\Eventos.png" alt="{{ $event->title }}">
+                    <div class="card-body">
+                        <p class="card-date">18/05/2023</p>
+                        <h5 class="card-title">{{ $event->title }}</h5>
+                        <p class="card-partcipants">X Participantes</p>
+                        <a href="#" class="btn btn-primary">Saber mais</a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+@endsection
