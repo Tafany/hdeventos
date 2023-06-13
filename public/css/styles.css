@@ -59,6 +59,17 @@ header {
   border: 2px solid #7ab317;
 }
 
+.msg {
+  background: #7ab317;
+  color: white;
+  border: 1px solid #2a044a;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 1em;
+}
+
+
 /* Estilo da Nav */
 
 #navbar img {
@@ -140,11 +151,11 @@ header {
 }
 
 #cards-container .card {
-  flex: 1 1 0;
+  flex: 1 1 24%;
   max-width: 25%;
   border-radius: 10px;
   padding: 0;
-  margin: 5px;
+  margin: .5%;
 
 }
 
@@ -174,6 +185,15 @@ header {
 
 }
 
+/* event Create */
+#event-create-container {
+  margin-top: 160px;
+}
+
+#event-create-container label {
+  font-weight: 700;
+  margin: 1rem 0;
+}
 
 footer {
   text-align: center;
