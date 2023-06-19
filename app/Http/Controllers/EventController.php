@@ -58,4 +58,11 @@ class EventController extends Controller
     // salva o evento e redireciono o usuário para outra página.  Aqui vou coloar flash messages
     return redirect('/')->with('msg', 'Evento criado com sucesso!');
   }
+
+  public function show($id)
+  {
+    $event = Event::findOrFail($id);
+
+    return view('events.show', ['event' => $event]);
+  }
 }
