@@ -7,7 +7,6 @@
         <h1>Crie o seu evento</h1>
         <form action="/events" method="POST" enctype="multipart/form-data">
             @csrf
-
             <div class="form-group">
                 <label for="image">Evento:</label>
                 <input type="file" id="image" name="image" class="from-control-file">
@@ -29,7 +28,26 @@
             </div>
             <div class="form-group">
                 <label for="title">Descrição:</label>
-                <textarea name="description" id="descripition" class="form-control" placeholder="Descreva seu evento..."></textarea>
+                <textarea name="description" id="description" class="form-control" placeholder="Descreva seu evento"></textarea>
+            </div>
+            {{-- aqui estou fazendo aula 19 --}}
+            <div class="form-group">
+                <label for="title">Adicione itens de infraestrutura:</label>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Cadeiras">Cadeiras
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Palco">Palco
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Bebidas grátis">Bebidas Grátis
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Open Food">Open Food
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Brindes">Brindes
+                </div>
             </div>
             <input type="submit" class="btn btn-primary" value="Criar Evento">
         </form>

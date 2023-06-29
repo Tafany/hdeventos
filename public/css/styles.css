@@ -64,7 +64,8 @@ header {
   color: white;
   border: 1px solid #2a044a;
   width: 100%;
-  margin-bottom: 0;
+  position: absolute;
+  top: 5rem;
   text-align: center;
   padding: 1em;
 }
@@ -238,6 +239,14 @@ header {
 
 #info-container #event-submit {
   margin: 20px 0;
+}
+
+#items-list {
+  padding-left: 0;
+}
+
+#items-list li {
+  display: flex;
 }
 
 /* _______________ */
